@@ -55,7 +55,7 @@ export default function Login(){
                 localStorage.setItem("ken42_token", JSON.stringify(res_data.token));
 
                 // navigate to dashboard
-                return navigate("/dashboard");
+                return navigate("/main/dashboard");
             }
             // login unsuccessful
             setError(res_data.msg);

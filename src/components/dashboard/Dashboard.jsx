@@ -8,9 +8,6 @@ import { useEffect, useState } from "react";
 // actions
 import getDataAction from "../../redux/getData/action";
 
-// components
-import CaseCountCard from "../card/caseCountCard/CaseCountCard";
-
 export default function Dashboard(){
 
     const dispatch = useDispatch();

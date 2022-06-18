@@ -1,0 +1,77 @@
+.navbar{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 2rem;
+    padding: 0rem 2rem;
+    box-shadow: 0px 1.5px 7px 0px rgba(00, 00, 00, 0.2);
+    background: white;
+    margin-bottom: 1.5rem;
+}
+
+.navbar > *{
+    /* border: 1px solid black; */
+}
+
+.navbar_left{
+    display: flex;
+    align-items: center;
+}
+
+.navbar_left > img.navbar_company_logo{
+    width: 3rem;
+    /* border: 1px solid green; */
+}
+
+.navbar_mid{
+    flex-grow: 1;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar_mid > *{
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 0rem;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar_option:hover{
+    border-bottom: 2px solid #2d8cf0;
+    color: #2d8cf0;
+}
+
+.navbar_option:active{
+    border-bottom: 2px solid transparent;
+    color: black;
+}
+
+.navbar_option > span{
+    font-size: 0.9rem;
+}
+
+.navbar_option_icon{
+    font-size: 0.9rem;
+}
+
+.navbar_right{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.4rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 0.3rem;
+}
+
+.navbar_right:hover{
+    color: #2d8cf0;
+    /* box-shadow: 0px 0px 2px 0px #b0d3f8; */
+}
+
+.selected_option {
+    border-bottom: 2px solid #2d8cf0;
+    color: #2d8cf0;
+}

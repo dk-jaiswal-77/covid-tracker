@@ -1,0 +1,104 @@
+.countriesPage_container{
+    width: 80%;
+    margin: 0px auto;
+}
+
+.countriesPage_container > *{
+    background: white;
+}
+
+.search_filter_row{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.5rem 2rem 2rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.search_filter_row > *{
+    /* border: 1px solid red; */
+}
+
+.countries_list_title_container{
+    font-size: 1.5rem;
+    color: rgba(00, 00, 00, 0.8);
+}
+
+.search_container{
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+}
+
+.search_container > button{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.search_container > button > .search_logo{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.search_container > input{
+    border-radius: 0;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    flex-grow: 1;
+}
+
+.search_container > .searchMatchedCountries{
+    position: absolute;
+    
+}
+
+.countries_count_container{
+    display: flex;
+    gap: 0.5rem;
+    background: #2db7f5;
+}
+
+/* -------------------------------------------------------------- */
+.single_data{
+    border: 1px solid rgba(00, 00, 00, 0.1);
+    border-top: none;
+    display: flex;
+    padding: 0rem 1.5rem;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: rgba(00, 00, 00, 0.8);
+}
+
+.single_data > span{
+    /* border: 1px solid black; */
+    padding: 1rem 0rem;  
+    width: 25%;
+}
+
+.list_head{
+    background: var(--primary-bg-color);
+    font-weight: 500;
+    color: rgba(00, 00, 00, 0.8);
+}
+
+.list_head > span{
+    padding: 0.7rem 0rem;
+}
+
+.pagination{
+    margin: 1rem 0rem;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 5px 1px rgba(00, 00, 00, 0.1);
+}
+
+.countries > div:last-child{
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}

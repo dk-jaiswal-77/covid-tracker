@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root{
+    --primary-bg-color : #f3f4f6;
+    --font-family : 'Ubuntu', sans-serif;
+    --font-color-1 : rgba(00,00, 00, 0.7);
+    --btn-bg-color : #1f2937;
+    --btn-hover-color : #434e60;
+    --font-size-small : 0.9rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    font-family: var(--font-family);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ---------------------------------------------------------- */
+.App{
+    background: var(--primary-bg-color);
+    min-height: 100vh;
+    padding-bottom: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input_entry{
+    padding: 0.8rem;
+    border: 1px solid rgba(83,146,249, 0.3);
+    border-radius: 0.25rem;
+    /* font-family: var(font-family); */
 }
 
-.App-link {
-  color: #61dafb;
+.input_entry:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px 1px #e3e8fe;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select{
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.anchor{
+    color: var(--font-color-1);
+}
+
+.anchor:hover{
+    color: black;
+}
+
+.anchor:active{
+    color: var(--font-color-1);
+}
+
+.btn_1{
+    border: none;
+    border-radius: 0.3rem;
+    background: var(--btn-bg-color);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+}
+
+.btn_1:hover{
+    background: var(--btn-hover-color);
+}
+
+.btn_1:active{
+    background: var(--btn-bg-color);
 }

@@ -27,6 +27,14 @@
     color: rgba(00, 00, 00, 0.8);
 }
 
+.countries_list_title_container:hover{
+    color: #2d8cf0;
+}
+
+.countries_list_title_container:active{
+    color: rgba(00, 00, 00, 0.8);
+}
+
 .search_container{
     flex-grow: 1;
     display: flex;
@@ -101,4 +109,29 @@
 .countries > div:last-child{
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+}
+
+/* ---------------------------------------------------------- */
+.searchMatchedCountries{
+    background: white;
+    box-sizing: border-box;
+    border: 1px solid rgba(00, 00, 00, 0.2);
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.searchMatchedCountries > span{
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+    color: rgba(00, 00, 00, 0.8);
+}
+
+.searchMatchedCountries > span:hover{
+    background: #e3e8fe;
+}
+
+.searchMatchedCountries > span:active{
+    background: none;
 }

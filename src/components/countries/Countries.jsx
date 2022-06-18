@@ -32,6 +32,7 @@ export default function Countries() {
             if(search.search_for.trim() === "")
             {
                 setSearchMatchedCountries("");
+                e.target.parentElement.lastElementChild.style.display = "none";
             }
             else
             {
@@ -41,17 +42,23 @@ export default function Countries() {
                 })
                 setSearchMatchedCountries(matchedCountries);
 
+                // positioning the searched countries container
                 let width = e.target.parentElement.offsetWidth;
                 let height = e.target.parentElement.offsetHeight;
+                let btn_width = e.target.nextSibling.offsetWidth;
+    
+                const searchMatchedCountries_div = e.target.parentElement.lastElementChild;
+                searchMatchedCountries_div.style.top = `${height}px`;
+                searchMatchedCountries_div.style.width = `${width-btn_width}px`;
 
-                // console.log(width, height);
-                
+                // making searched countries container visible
+                e.target.parentElement.lastElementChild.style.display = "flex"; 
             }
-            console.log(searchMatchedCountries);
         }, 700);
     }
 
     function handleSearch(e) {
+        console.log("change");
         setSearch({ ...search, [e.target.id]: e.target.value });
         searchDebouncer(e);
     }
@@ -69,7 +76,11 @@ export default function Countries() {
         <div className="countriesPage_container">
 
             <div className="search_filter_row">
-                <div className="countries_list_title_container">Countries List</div>
+                <div className="countries_list_title_container" onClick={()=>{
+                    handlePagination(0);
+                }}>
+                    Countries List
+                </div>
 
                 <div className="search_container">
                     <input type="text" id="search_for" className="input_entry" value={search.search_for} onChange={handleSearch} />
@@ -80,7 +91,7 @@ export default function Countries() {
 
                     {
                         (searchMatchedCountries === "")
-                        ? "" 
+                        ? <div className="searchMatchedCountries"></div>
                         : (searchMatchedCountries.length === 0) 
                         ? <div className="searchMatchedCountries">
                             <span className="searchMatchedCountry">No result found!</span>
@@ -88,7 +99,10 @@ export default function Countries() {
                         : <div className="searchMatchedCountries">
                             {searchMatchedCountries.map((country) => {
                                 return (
-                                    <span key={country.ID} className="searchMatchedCountry">
+                                    <span key={country.ID} className="searchMatchedCountry" onClick={(e)=>{
+                                        setCountries([country]);
+                                        e.target.parentElement.style.display = "none";
+                                    }}>
                                         {country.Country}
                                     </span>
                                 );
